@@ -8,7 +8,7 @@ frontend-client copy/
 # Server/Client typical ignores
 node_modules/
 .env
-/.gitignore
+
 .env.* 
 dist/
 build/
