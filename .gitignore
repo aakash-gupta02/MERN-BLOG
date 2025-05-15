@@ -4,6 +4,8 @@ frontend-client copy/
 
 /index.html
 /index2.html
+/index3.html
+
 
 # Server/Client typical ignores
 node_modules/
