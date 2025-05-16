@@ -149,9 +149,15 @@ Visit: `http://localhost:5173`
 
 ## 📸 Screenshots
 
-*(Add screenshots of UI here once ready)*
-
+![Image](https://github.com/user-attachments/assets/ccf371a5-92d1-476d-bba7-cc073091bd38)
 ---
+![Image](https://github.com/user-attachments/assets/81fa6d26-83d6-42f0-aca4-e24eb3d90363)
+---
+![Image](https://github.com/user-attachments/assets/ecd7f577-2075-40ee-b1ad-4286fce8c275)
+---
+![Image](https://github.com/user-attachments/assets/79e68d5b-33eb-4ee8-9f82-0aba1072fc64)
+---
+![Image](https://github.com/user-attachments/assets/9411d98e-108a-465e-830a-9657b9445d64)
 
 ## 💡 Future Improvements
 
@@ -183,6 +189,3 @@ Made with 💻 by [Aakash Gupta](https://github.com/aakash-gupta02)
 
 **This project is built for learning and practice purposes only.** It is not meant for production use.
 
-```
-
----
