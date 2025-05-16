@@ -8,9 +8,6 @@ const Navbar = () => {
   const navigate = useNavigate();
   const { isAuthenticated, user, logout } = useAuth();
 
-
-
-
   return (
     <nav className="bg-white shadow-sm py-4 px-6 md:px-12 lg:px-24">
       <div className="flex justify-between items-center">

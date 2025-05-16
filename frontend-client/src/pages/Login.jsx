@@ -4,6 +4,7 @@ import { FaRegEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -30,11 +31,13 @@ const LoginPage = () => {
 
       console.log("Login Successful:", res);
       setMessage("Login successful!");
+      toast.success('Login Successful!');
 
       // Optional: Redirect user after login
       navigate("/");
     } catch (error) {
       setMessage("Login failed");
+      toast.error('Login Failed');
 
       console.error(
         "Login Failed:",

@@ -17,10 +17,12 @@ import DashboardLayout from "./components/DashboardLayout";
 import ProfileSection from "./pages/ProfileSection";
 import BlogDashboard from "./pages/BlogDashboard";
 import Navbar from "./components/Navbar";
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <>
+       <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
     
    
       <Routes>

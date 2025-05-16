@@ -1,59 +1,4 @@
-// // Register.jsx
-// import React from 'react';
-
-// const Register = () => {
-//   return (
-//     <section className="min-h-screen flex items-center justify-center bg-gray-50 py-16 px-4">
-//       <div className="max-w-md w-full bg-white p-8 rounded-xl shadow-md">
-//         <h2 className="text-2xl font-bold mb-6 text-center text-gray-900">Create a New Account</h2>
-//         <form className="space-y-5">
-//           <div>
-//             <label htmlFor="name" className="block mb-1 text-sm font-medium text-gray-700">Full Name</label>
-//             <input
-//               type="text"
-//               id="name"
-//               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-//               placeholder="John Doe"
-//               required
-//             />
-//           </div>
-//           <div>
-//             <label htmlFor="email" className="block mb-1 text-sm font-medium text-gray-700">Email address</label>
-//             <input
-//               type="email"
-//               id="email"
-//               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-//               placeholder="you@example.com"
-//               required
-//             />
-//           </div>
-//           <div>
-//             <label htmlFor="password" className="block mb-1 text-sm font-medium text-gray-700">Password</label>
-//             <input
-//               type="password"
-//               id="password"
-//               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-//               placeholder="••••••••"
-//               required
-//             />
-//           </div>
-//           <button
-//             type="submit"
-//             className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-200"
-//           >
-//             Register
-//           </button>
-//         </form>
-//         <p className="text-sm text-center text-gray-500 mt-4">
-//           Already have an account? <a href="/login" className="text-indigo-600 font-medium">Login</a>
-//         </p>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Register;
-
+import toast from "react-hot-toast";
 import React, { useState } from "react";
 
 import { IoEyeOutline } from "react-icons/io5";
@@ -88,17 +33,20 @@ const RegisterPage = () => {
       console.log("Registration Successful:", data);
          setMessage('Registered successfully!');
       // Optionally redirect or clear form
+      toast.success('User registered Succesfully!');
 
       navigate("/login")
 
 
     } catch (error) {
-      setMessage('Registration failed');
+      // setMessage('Registration failed');
+      // toast.error('Registration Failed');
 
       console.error(
         "Registration Failed:",
         error.response?.data?.message || error.message
       );
+      toast.error(`${error.response?.data?.message || error.message}`)
       // Optionally show error to user
     }
   };
