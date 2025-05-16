@@ -11,6 +11,7 @@ import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 import ProtectedRoute from "./components/ProtectedRoute";
 import BlogForm from "./components/BlogForm";
+import DashboardLayout from "./components/DashboardLayout";
 
 function App() {
   return (
@@ -36,6 +37,8 @@ function App() {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       {/* <BlogForm/> */}
+<DashboardLayout/>
+
     </>
   );
 }
