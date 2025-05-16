@@ -7,15 +7,22 @@ import EditBlogPage from "./pages/EditBlogPage";
 import Home from "./pages/Home";
 import NotFoundPage from "./pages/NotFoundPage";
 import BlogDetail from "./pages/BlogDetail";
-import Navbar from "./components/NavBar";
+// import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
+// import Navbar from "./components/NavBar";
+
 import ProtectedRoute from "./components/ProtectedRoute";
 import BlogForm from "./components/BlogForm";
 import DashboardLayout from "./components/DashboardLayout";
+import ProfileSection from "./pages/ProfileSection";
+import BlogDashboard from "./pages/BlogDashboard";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
+    
+   
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
@@ -34,10 +41,15 @@ function App() {
         <Route path="/blogs/new" element={<CreateBlogPage />} />
         <Route path="/blogs/:id/edit" element={<EditBlogPage />} />
 
+        <Route path="/profile" element={<ProfileSection />} />
+        <Route path="/myblogs" element={ <BlogDashboard/>} />
+
+
+
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      {/* <BlogForm/> */}
-<DashboardLayout/>
+
+
 
     </>
   );

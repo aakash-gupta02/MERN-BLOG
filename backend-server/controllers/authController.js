@@ -68,3 +68,11 @@ export const getAllUsers = async (req, res) => {
     res.status(500).json({ message: "Error fetching blog", error: err });
   }
 };
+
+export const getUserProfile = async (req, res) => {
+  try {
+    res.status(200).json(req.user); // `req.user` already has user from middleware
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
+  }
+};
